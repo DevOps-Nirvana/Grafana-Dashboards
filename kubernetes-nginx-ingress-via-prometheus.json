@@ -41,7 +41,7 @@
         "type": "dashboard"
       },
       {
-        "datasource": "prometheus",
+        "datasource": "${DS_PROMETHEUS}",
         "enable": true,
         "expr": "sum(changes(nginx_ingress_controller_config_last_reload_successful_timestamp_seconds{instance!=\"unknown\",controller_class=~\"$controller_class\",namespace=~\"$namespace\"}[30s])) by (controller_class)",
         "hide": false,
@@ -87,7 +87,7 @@
         "rgba(237, 129, 40, 0.89)",
         "#d44a3a"
       ],
-      "datasource": "prometheus",
+      "datasource": "${DS_PROMETHEUS}",
       "decimals": 1,
       "description": "This is the total number of requests made in this period (top-right period selected)",
       "fieldConfig": {
@@ -545,7 +545,7 @@
         "#73BF69",
         "#73BF69"
       ],
-      "datasource": "prometheus",
+      "datasource": "${DS_PROMETHEUS}",
       "decimals": 0,
       "description": "This is the number of successful requests in the last minute.  Successful being 1xx or 2xx by the standard HTTP definition.",
       "fieldConfig": {
@@ -637,7 +637,7 @@
         "#3274D9",
         "#3274D9"
       ],
-      "datasource": "prometheus",
+      "datasource": "${DS_PROMETHEUS}",
       "decimals": 0,
       "description": "This is the number of 3xx requests in the last minute.",
       "fieldConfig": {
@@ -728,7 +728,7 @@
         "#FF9830",
         "#FF9830"
       ],
-      "datasource": "prometheus",
+      "datasource": "${DS_PROMETHEUS}",
       "decimals": 0,
       "description": "This is the number of 4xx requests in the last minute.",
       "fieldConfig": {
@@ -819,7 +819,7 @@
         "#F2495C",
         "#F2495C"
       ],
-      "datasource": "prometheus",
+      "datasource": "${DS_PROMETHEUS}",
       "decimals": 0,
       "description": "This is the number of 5xx requests in the last minute.",
       "fieldConfig": {
@@ -1996,7 +1996,7 @@
             "$__all"
           ]
         },
-        "datasource": "prometheus",
+        "datasource": "${DS_PROMETHEUS}",
         "definition": "label_values(nginx_ingress_controller_config_hash, controller_class) ",
         "description": null,
         "error": null,
@@ -2032,7 +2032,7 @@
             "$__all"
           ]
         },
-        "datasource": "prometheus",
+        "datasource": "${DS_PROMETHEUS}",
         "definition": "label_values(nginx_ingress_controller_requests{ controller_class=~\"$controller_class\"},namespace)",
         "description": null,
         "error": null,
@@ -2067,7 +2067,7 @@
             "$__all"
           ]
         },
-        "datasource": "prometheus",
+        "datasource": "${DS_PROMETHEUS}",
         "definition": "label_values(nginx_ingress_controller_requests{namespace=~\"$namespace\",controller_class=~\"$controller_class\"}, ingress) ",
         "description": null,
         "error": null,
@@ -2102,7 +2102,7 @@
             "$__all"
           ]
         },
-        "datasource": "prometheus",
+        "datasource": "${DS_PROMETHEUS}",
         "definition": "label_values(nginx_ingress_controller_config_hash{controller_class=~\"$controller_class\"}, controller_pod) ",
         "description": null,
         "error": null,
@@ -2157,8 +2157,8 @@
     ]
   },
   "timezone": "",
-  "title": "Kubernetes Nginx Ingress Controller - DevOps Nirvana",
+  "title": "Kubernetes Nginx Ingress Controller NextGen - DevOps Nirvana",
   "description": "Nginx Ingress Controller via Prometheus Metrics Dashboard created for https://github.com/DevOps-Nirvana",
-  "uid": "devops-nirvana-k8s-nginx-ingress-prometheus",
-  "version": 26
+  "uid": "k8s-nginx-ingress-prometheus-ng",
+  "version": 27
 }
