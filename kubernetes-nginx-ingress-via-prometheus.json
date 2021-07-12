@@ -1478,7 +1478,7 @@
       "targets": [
         {
           "expr": "sum by (le)(\n  increase(\n    nginx_ingress_controller_request_duration_seconds_bucket{\n      status!=\"404\",status!=\"500\",\n      controller_class =~ \"$controller_class\",\n      namespace =~ \"$namespace\",\n      ingress =~ \"$ingress\"\n    }[$__interval]\n  )\n)",
-          "format": "time_series",
+          "format": "heatmap",
           "hide": false,
           "interval": "5m",
           "intervalFactor": 1,
