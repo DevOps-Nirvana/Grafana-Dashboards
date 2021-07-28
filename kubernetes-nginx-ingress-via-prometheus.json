@@ -2160,5 +2160,5 @@
   "title": "Kubernetes Nginx Ingress Controller NextGen - DevOps Nirvana",
   "description": "Nginx Ingress Controller via Prometheus Metrics Dashboard created for https://github.com/DevOps-Nirvana",
   "uid": "k8s-nginx-ingress-prometheus-ng",
-  "version": 27
+  "version": 28
 }
