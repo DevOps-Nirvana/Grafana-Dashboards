@@ -178,7 +178,7 @@
         "rgba(237, 129, 40, 0.89)",
         "#d44a3a"
       ],
-      "datasource": null,
+      "datasource": "${DS_PROMETHEUS}",
       "decimals": 1,
       "description": "This is the percentage of successful requests over the entire period in the top-right hand corner.\n\nNOTE: Ignoring 404s in this metric, since a 404 is a normal response for errant/invalid request.  This helps prevent this percentage from being affected by typical web scanners and security probes.",
       "fieldConfig": {
@@ -270,7 +270,7 @@
         "rgba(237, 129, 40, 0.89)",
         "#d44a3a"
       ],
-      "datasource": null,
+      "datasource": "${DS_PROMETHEUS}",
       "decimals": 0,
       "description": "This is the number of new connections made to the controller in the last minute.  NOTE: This metric does not support the Ingress, Namespace variables, as this is at a lower-level than the actual application.  It does support the others though (Env, Controller Class, Pod)",
       "fieldConfig": {
@@ -362,7 +362,7 @@
         "rgba(237, 129, 40, 0.89)",
         "#d44a3a"
       ],
-      "datasource": null,
+      "datasource": "${DS_PROMETHEUS}",
       "decimals": 0,
       "description": "The number of HTTP requests made in the last 1 minute window",
       "fieldConfig": {
@@ -454,7 +454,7 @@
         "rgba(237, 129, 40, 0.89)",
         "#299c46"
       ],
-      "datasource": null,
+      "datasource": "${DS_PROMETHEUS}",
       "description": "This is the percentage of successful requests over the last minute.\n\nNOTE: Ignoring 404s in this metric, since a  404 is a normal response for errant requests",
       "fieldConfig": {
         "defaults": {
@@ -906,7 +906,7 @@
       "bars": false,
       "dashLength": 10,
       "dashes": false,
-      "datasource": null,
+      "datasource": "${DS_PROMETHEUS}",
       "description": "This is a total number of requests broken down by the ingress.  This can help get a sense of scale in relation to each other.",
       "fieldConfig": {
         "defaults": {
@@ -1011,7 +1011,7 @@
       "bars": false,
       "dashLength": 10,
       "dashes": false,
-      "datasource": null,
+      "datasource": "${DS_PROMETHEUS}",
       "description": "The breakdown of the various HTTP status codes of the requests handled within' this period that matches the variables chosen above.\n\nThis chart helps notice and dive into which service is having failures and of what kind.",
       "fieldConfig": {
         "defaults": {
@@ -1140,7 +1140,7 @@
       "bars": true,
       "dashLength": 10,
       "dashes": false,
-      "datasource": null,
+      "datasource": "${DS_PROMETHEUS}",
       "description": "The total number of HTTP requests made within' each period",
       "fieldConfig": {
         "defaults": {
@@ -1255,7 +1255,7 @@
       "bars": false,
       "dashLength": 10,
       "dashes": false,
-      "datasource": null,
+      "datasource": "${DS_PROMETHEUS}",
       "decimals": 1,
       "description": "This graph can help assess and help us meet SLA requirements as far as the responsive time of our services.\n\nFor a more detailed latency graph broken out by ingress please open the closed tab at the bottom because it is very CPU intensive.",
       "fieldConfig": {
@@ -1451,7 +1451,7 @@
         "mode": "spectrum"
       },
       "dataFormat": "tsbuckets",
-      "datasource": null,
+      "datasource": "${DS_PROMETHEUS}",
       "description": "This graph can help assess and help us meet SLA requirements as far as the responsive time of our services.\n\nFor a more detailed latency graph broken out by ingress please open the closed tab at the bottom because it is very CPU intensive.",
       "fieldConfig": {
         "defaults": {
@@ -1533,7 +1533,7 @@
       "bars": true,
       "dashLength": 10,
       "dashes": false,
-      "datasource": null,
+      "datasource": "${DS_PROMETHEUS}",
       "description": "NOTE: This does not work per ingress/namespace\n\nThis is the number of new connections opened by the controller",
       "fieldConfig": {
         "defaults": {
@@ -1638,7 +1638,7 @@
       "bars": true,
       "dashLength": 10,
       "dashes": false,
-      "datasource": null,
+      "datasource": "${DS_PROMETHEUS}",
       "description": "NOTE: This does not work per ingress/namespace\n\nThe total number of connections opened to our ingresses.  If you have a CDN in front of our services, it is not unusual for this to be very low.  If/when we use something like websockets with a persistent connection this can/will be very high.",
       "fieldConfig": {
         "defaults": {
@@ -1751,7 +1751,7 @@
           "bars": false,
           "dashLength": 10,
           "dashes": false,
-          "datasource": null,
+          "datasource": "${DS_PROMETHEUS}",
           "description": "",
           "fieldConfig": {
             "defaults": {
@@ -1857,7 +1857,7 @@
           "bars": false,
           "dashLength": 10,
           "dashes": false,
-          "datasource": null,
+          "datasource": "${DS_PROMETHEUS}",
           "fieldConfig": {
             "defaults": {
               "custom": {},
@@ -2160,5 +2160,5 @@
   "title": "Kubernetes Nginx Ingress Controller NextGen - DevOps Nirvana",
   "description": "Nginx Ingress Controller via Prometheus Metrics Dashboard created for https://github.com/DevOps-Nirvana",
   "uid": "k8s-nginx-ingress-prometheus-ng",
-  "version": 28
+  "version": 29
 }
